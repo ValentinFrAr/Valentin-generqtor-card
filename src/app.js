@@ -12,9 +12,22 @@ const iconTop = document.querySelector(".top-icon");
 const iconBottom = document.querySelector(".bottom-icon");
 const cardValue = document.querySelector(".number");
 const btnGenerator = document.querySelector(".generate");
+let btnStopInterval = document.querySelector(".btn-stop");
 
-btnGenerator.addEventListener("click", generateCard);
+let intervalId;
+btnGenerator.addEventListener("click", startCardGeneration);
 
+function startCardGeneration() {
+  intervalId = setInterval(generateCard, 1000);
+  btnGenerator.removeEventListener("click", startCardGeneration);
+  btnStopInterval.addEventListener("click", stopCardGeneration);
+}
+
+function stopCardGeneration() {
+  clearInterval(intervalId);
+  btnGenerator.addEventListener("click", startCardGeneration);
+  btnStopInterval.addEventListener("click", stopCardGeneration);
+}
 function generateCard() {
   let randomNum = numbers[Math.floor(Math.random() * numbers.length)];
   let randomIcon = icons[Math.floor(Math.random() * icons.length)];

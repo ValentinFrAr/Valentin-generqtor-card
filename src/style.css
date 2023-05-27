@@ -16,10 +16,9 @@ body {
 }
 
 .card:hover {
-  transform: scale(1.1);
   background-color: rgba(231, 26, 8, 0.8);
   color: blanchedalmond;
-  transform: rotateX(180deg);
+  transform: rotateY(180deg);
   box-shadow: 8px 8px 5px blanchedalmond;
 }
 
@@ -52,7 +51,8 @@ body {
   text-align: center;
 }
 
-.generate {
+.generate,
+.btn-stop {
   padding: 15px 20px;
   border-radius: 30px;
   background: #bc2708;
