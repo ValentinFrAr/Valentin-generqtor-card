@@ -1,4 +1,70 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
 body {
   background: #1bab0a;
+}
+
+.card {
+  background-color: #fff;
+  width: 250px;
+  height: 400px;
+  margin: auto;
+  margin-top: 4rem;
+  position: relative;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 8px 8px 5px #bc2708;
+  transition: all 0.3;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  background-color: rgba(231, 26, 8, 0.8);
+  color: blanchedalmond;
+  transform: rotateX(180deg);
+  box-shadow: 8px 8px 5px blanchedalmond;
+}
+
+.top-icon {
+  position: absolute;
+  top: -9px;
+  left: 15px;
+  font-size: 80px;
+}
+
+.bottom-icon {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+  font-size: 80px;
+  transform: rotate(180deg);
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 165px;
+  font-size: 75px;
+}
+
+.btn {
+  margin: 2rem auto;
+  display: block;
+  text-align: center;
+}
+
+.generate {
+  padding: 15px 20px;
+  border-radius: 30px;
+  background: #bc2708;
+  color: blanchedalmond;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 2px solid #000;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.generate:hover {
+  color: #bc2708;
+  background-color: blanchedalmond;
 }
